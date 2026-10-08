@@ -1,4 +1,4 @@
-package org.mekkaoui.customerservice;
+package org.mekkaoui.imane.customerservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

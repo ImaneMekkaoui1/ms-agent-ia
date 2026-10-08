@@ -1,21 +1,18 @@
-package org.mekkaoui.customerservice.controllers;
+package org.mekkaoui.imane.customerservice.controllers;
 
-
-import org.mekkaoui.customerservice.entities.Customer;
-import org.mekkaoui.customerservice.service.CustomerService;
+import org.mekkaoui.imane.customerservice.entities.Customer;
+import org.mekkaoui.imane.customerservice.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 public class CustomerRestController {
-
     private CustomerService customerService;
 
     public CustomerRestController(CustomerService customerService) {
         this.customerService = customerService;
     }
-
     @GetMapping("/customers")
     public List<Customer> getAllCustomers(){
         return customerService.getAllCustomers();
@@ -24,9 +21,8 @@ public class CustomerRestController {
     public Customer findCustomerById(@PathVariable Long id){
         return customerService.findCustomerById(id);
     }
-    @PostMapping("/cusomers")
+    @PostMapping("/customers")
     public Customer saveCustomer(@RequestBody Customer customer){
         return customerService.saveCustomer(customer);
     }
 }
-

@@ -1,9 +1,7 @@
-package org.mekkaoui.customerservice;
+package org.mekkaoui.imane.customerservice;
 
-import lombok.Builder;
-import org.apache.catalina.filters.RemoteIpFilter;
-import org.mekkaoui.customerservice.entities.Customer;
-import org.mekkaoui.customerservice.service.CustomerService;
+import org.mekkaoui.imane.customerservice.entities.Customer;
+import org.mekkaoui.imane.customerservice.service.CustomerService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,18 +17,15 @@ public class CustomerServiceApplication {
     }
 
     @Bean
-    public CommandLineRunner commandLineRunner(CustomerService customerService) {
-        return args -> {
-            List<String> names = List.of("Imane", "Jordan", "Michael");
+    CommandLineRunner commandLineRunner(CustomerService customerService){
+        return args ->{
+            List<String> names = List.of("Mohamed","Imane","yassine");
             names.forEach(name->{
                 customerService.saveCustomer(Customer.builder()
-                        .name(name).email(name+"@gmail.com")
-                        .build()
-                );
+                        .name(name)
+                        .email(name+"@gmail.com")
+                        .build());
             });
-
         };
-
     }
-
 }

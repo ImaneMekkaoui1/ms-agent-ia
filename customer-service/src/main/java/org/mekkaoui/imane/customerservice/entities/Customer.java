@@ -1,5 +1,4 @@
-package org.mekkaoui.customerservice.entities;
-
+package org.mekkaoui.imane.customerservice.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,7 +6,7 @@ import jakarta.persistence.Id;
 import lombok.*;
 
 @Entity
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor @Builder
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Customer {
     @Id @GeneratedValue
     private Long id;
