@@ -1,4 +1,4 @@
-package org.mekkaoui.gatewayservice;
+package org.mekkaoui.imane.gatewayservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
