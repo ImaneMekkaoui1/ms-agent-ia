@@ -1,4 +1,4 @@
-package org.mekkaoui.ebankservice;
+package org.mekkaoui.imane.ebankservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

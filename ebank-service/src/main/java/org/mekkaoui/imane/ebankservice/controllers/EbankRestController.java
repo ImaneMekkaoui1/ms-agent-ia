@@ -1,8 +1,7 @@
-package org.mekkaoui.ebankservice.controllers;
+package org.mekkaoui.imane.ebankservice.controllers;
 
-
-import org.mekkaoui.ebankservice.entities.BankAccount;
-import org.mekkaoui.ebankservice.service.EbankService;
+import org.mekkaoui.imane.ebankservice.entities.BankAccount;
+import org.mekkaoui.imane.ebankservice.services.EbankService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,16 +14,15 @@ public class EbankRestController {
         this.ebankService = ebankService;
     }
     @GetMapping("/accounts")
-    public List<BankAccount> getAllBankAccounts() {
+    public List<BankAccount> getAllBankAccounts(){
         return ebankService.getAllBankAccounts();
-
     }
     @GetMapping("/accounts/{id}")
-    public BankAccount getBankAccountById(@PathVariable String id) {
+    public BankAccount getBankAccountById(@PathVariable String id){
         return ebankService.getBankAccountById(id);
     }
-    @PostMapping("/accounts")
-    public BankAccount saveBankAccount(@RequestBody BankAccount bankAccount) {
-        return ebankService.saveBankAccount(bankAccount);
+    @PostMapping()
+    public BankAccount save(@RequestBody BankAccount bankAccount){
+        return ebankService.save(bankAccount);
     }
 }

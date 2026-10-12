@@ -1,12 +1,9 @@
-package org.mekkaoui.ebankservice.model;
+package org.mekkaoui.imane.ebankservice.model;
 
 import lombok.*;
 
 @Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+@Setter @AllArgsConstructor @NoArgsConstructor @Builder
 public class Customer {
     private Long id;
     private String name;
