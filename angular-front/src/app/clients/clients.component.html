@@ -1,0 +1,38 @@
+
+<div>
+  <div class="p-3">
+    @if (loadService.isLoading()) {
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    }
+  </div>
+
+  @if (clients$ | async; as state) {
+    @if (state.status === RequestStatus.ERROR) {
+      <div class="text-danger">
+        {{ state.errorMessage }}
+      </div>
+    } @else if (state.status === RequestStatus.SUCCESS) {
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+        </thead>
+
+        <tbody>
+          @for (client of state.clients; track client.id) {
+            <tr>
+              <td>{{ client.id }}</td>
+              <td>{{ client.name }}</td>
+              <td>{{ client.email }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  }
+</div>
