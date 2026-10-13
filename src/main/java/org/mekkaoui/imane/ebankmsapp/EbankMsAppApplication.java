@@ -1,4 +1,4 @@
-package org.mekkaoui.ebankmsapp;
+package org.mekkaoui.imane.ebankmsapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

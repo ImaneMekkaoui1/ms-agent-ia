@@ -8,7 +8,7 @@
         <version>4.1.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.mekkaoui</groupId>
+    <groupId>org.mekkaoui.imane</groupId>
     <artifactId>ebank-ms-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ebank-ms-app</name>
@@ -27,7 +27,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>25</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
